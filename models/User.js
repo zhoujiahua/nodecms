@@ -19,10 +19,14 @@ const UserSchema = new Schema({
     avatar: {
         type: String
     },
-   /*  date: {
+    identity: {
+        type: String,
+        required:true
+    },
+   date: {
         type: Date,
-        required: Date.now
-    } */
+        default:Date.now
+    } 
 })
 
 module.exports = User = mongoose.model("users", UserSchema);
